@@ -40,6 +40,11 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0 1.6rem;
     }
 
+    .panels {
+        display: flex;
+        gap: 2rem;
+    }
+
     hr {
         border: 0;
         border-top: 1px solid #F2A000;
