@@ -8,7 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     :root {
-        --brand-1: #FFE6B5;
+        --brand-1: #ffedc8;
         --brand-2: #F2A000;
         --brand-3: #E78B1F;
         --brand-4: #F26C0A;
@@ -42,12 +42,14 @@ export const GlobalStyles = createGlobalStyle`
 
     .panels {
         display: flex;
+        /* align-items: stretch; */
         gap: 2rem;
+        background: var(--black-1);
     }
 
     hr {
         border: 0;
-        border-top: 1px solid #F2A000;
+        border-top: 1px solid var(--brand-2);
         margin-bottom: 2.4rem;
     }
 `;

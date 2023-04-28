@@ -27,6 +27,7 @@ export const Container = styled.div`
     padding: 2.2rem 2rem;
 
     display: flex;
+    gap: 2rem;
 
     background: var(--black-2);
     border-right: 2px solid var(--brand-2);
@@ -38,7 +39,7 @@ export const Container = styled.div`
       font-style: normal;
       font-weight: 400;
       font-size: 1.4rem;
-      line-height: 3.2rem;
+      line-height: 3rem;
 
       color: var(--brand-2);
 
@@ -49,6 +50,43 @@ export const Container = styled.div`
         font-weight: 700;
         color: var(--brand-1);
       }
+    }
+
+    table {
+      flex: 1;
+      background: var(--brand-1);
+      border-spacing: 0;
+      border: 0.15rem solid var(--brand-2);
+    }
+
+    thead {
+      height: 4.4rem;
+      background: var(--black-4);
+
+      th {
+        padding: 0 1.6rem;
+        color: var(--brand-1);
+
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        border-bottom: 0.15rem solid var(--brand-2);
+
+        text-align: left;
+      }
+    }
+
+    td {
+      height: 3.6rem;
+      padding: 0 1.6rem;
+
+      font-style: normal;
+      font-weight: 500;
+      font-size: 1.3rem;
+      line-height: 2.1rem;
+
+      border-bottom: 0.5px dashed var(--brand-4);
     }
   }
 
@@ -81,5 +119,38 @@ export const Container = styled.div`
         color: var(--brand-1);
       }
     }
+  }
+`;
+
+export const EmptyContainer = styled.div`
+  flex: 1;
+
+  /* min-height: 200px; */
+  padding: 2rem 1.6rem;
+  background: var(--black-2);
+  margin-bottom: 2.4rem;
+
+  border: 2px dashed var(--brand-2);
+  border-radius: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: 2.8rem;
+    color: var(--brand-1);
+  }
+
+  p {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--brand-2);
   }
 `;

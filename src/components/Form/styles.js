@@ -27,7 +27,9 @@ export const Container = styled.div`
   }
 
   .form-group {
-    margin-bottom: 2rem;
+    &:not(:last-child) {
+      margin-bottom: 2.4rem;
+    }
 
     display: flex;
     flex-direction: column;
@@ -44,17 +46,20 @@ export const Container = styled.div`
 
     input[type="number"] {
       height: 4.5rem;
+      padding: 0 1.2rem;
 
       background: var(--black-3);
       border: 1px solid var(--black-1);
       border-radius: 4px;
+
+      color: var(--white-3);
+      font-size: 1.6rem;
+      font-weight: 700;
     }
 
-    button[type="submit"] {
+    button {
       height: 4.5rem;
 
-      background: var(--brand-3);
-      border: 2px solid var(--brand-4);
       border-radius: 4px;
 
       color: var(--white-1);
@@ -69,6 +74,18 @@ export const Container = styled.div`
       align-items: center;
       gap: 1rem;
     }
+
+    button:nth-of-type(1) {
+      background: var(--brand-3);
+      border: 2px solid var(--brand-4);
+    }
+
+    button:nth-of-type(2) {
+      margin-top: 1rem;
+      color: var(--black-1);
+      background: var(--brand-1);
+      border: 2px solid var(--brand-2);
+    }
   }
 
   .form-group.form-group-checkbox {
@@ -79,7 +96,6 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
       gap: 1.2rem;
-      /* background-color: red; */
 
       input {
         width: 1.6rem;
