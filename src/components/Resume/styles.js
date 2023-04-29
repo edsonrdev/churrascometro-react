@@ -125,10 +125,8 @@ export const Container = styled.div`
 export const EmptyContainer = styled.div`
   flex: 1;
 
-  /* min-height: 200px; */
   padding: 2rem 1.6rem;
   background: var(--black-2);
-  margin-bottom: 2.4rem;
 
   border: 2px dashed var(--brand-2);
   border-radius: 0.5rem;

@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
+import { FormContext } from "../../contexts/Form";
+
 import { Container, EmptyContainer } from "./styles";
 import { FaCashRegister } from "react-icons/fa";
 import { IoInformationCircle } from "react-icons/io5";
 import { GiBarbecue } from "react-icons/gi";
-import { FormContext } from "../../contexts/Form";
 
 export const Resume = () => {
   const {
@@ -16,14 +17,12 @@ export const Resume = () => {
 
   const adultsConsumption = (adults * adultConsumption) / 1000;
   const childrenConsumption = (childs * 0.4 * adultConsumption) / 1000;
-  const edsonConsumption = (adultConsumption * 1.5) / 1000;
+  const edsonConsumption = edsonHasInvited ? (adultConsumption * 1.5) / 1000 : 0;
   const totalConsumption = (
     adultsConsumption +
     childrenConsumption +
     edsonConsumption
   ).toFixed(2);
-
-  // console.log(adultsConsumption, childrenConsumption, edsonConsumption, totalConsumption);
 
   return (
     <>
@@ -64,24 +63,26 @@ export const Resume = () => {
                   <td>Adultos</td>
                   <td>{adults}</td>
                   <td>
-                    {adults} x {adultConsumption} = {adultsConsumption}kg
+                    {adults} x {adultConsumption} = {adultsConsumption.toFixed(2)}kg
                   </td>
                 </tr>
                 <tr>
                   <td>Crianças</td>
                   <td>{childs}</td>
                   <td>
-                    {childs} x 0.4 x {adultConsumption} = {childrenConsumption}
+                    {childs} x 0.4 x {adultConsumption} = {childrenConsumption.toFixed(2)}
                     kg
                   </td>
                 </tr>
-                <tr>
-                  <td>Edson</td>
-                  <td>1</td>
-                  <td>
-                    1 x 1.5 x {adultConsumption} = {edsonConsumption}kg
-                  </td>
-                </tr>
+                {edsonHasInvited && (
+                  <tr>
+                    <td>Edson</td>
+                    <td>1</td>
+                    <td>
+                      1 x 1.5 x {adultConsumption} = {edsonConsumption.toFixed(2)}kg
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>

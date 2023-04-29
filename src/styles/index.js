@@ -42,9 +42,8 @@ export const GlobalStyles = createGlobalStyle`
 
     .panels {
         display: flex;
-        /* align-items: stretch; */
+        align-items: stretch;
         gap: 2rem;
-        background: var(--black-1);
     }
 
     hr {

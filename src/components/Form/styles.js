@@ -24,6 +24,8 @@ export const Container = styled.div`
   form {
     padding: 2.2rem 2rem;
     background: var(--black-2);
+    border: 2px solid var(--brand-2);
+    border-radius: 0 0 0.5rem 0.5rem;
   }
 
   .form-group {
@@ -100,13 +102,6 @@ export const Container = styled.div`
       input {
         width: 1.6rem;
         height: 1.6rem;
-
-        /* -webkit-appearance: none;
-        appearance: none; */
-
-        /* background: var(--black-3) !important;
-        border: 1px solid var(--black-1);
-        border-radius: 4px; */
 
         display: grid;
         place-content: center;
